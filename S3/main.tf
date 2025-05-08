@@ -1,10 +1,7 @@
 resource "aws_s3_bucket" "example" {
-  bucket = "test_bucket_name0181"
-  acl = "private"
+  bucket = var.bucket_name
+  acl    = var.acl
 
-
-  tags = {
-    Name        = "My bucket"
-    Environment = "Dev"
-  }
+  tags = var.tags
 }
+    
